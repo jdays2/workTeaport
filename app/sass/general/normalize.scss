@@ -22,8 +22,15 @@
   
   body {
     margin: 0;
+    width: 100%;
+
   }
   
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
   /**
    * Render the `main` element consistently in IE.
    */
@@ -75,6 +82,9 @@
   
   a {
     background-color: transparent;
+    outline: none;
+		border: none;
+    text-decoration: none;
   }
   
   /**
@@ -85,7 +95,8 @@
   abbr[title] {
     border-bottom: none; /* 1 */
     text-decoration: underline; /* 2 */
-    text-decoration: underline dotted; /* 2 */
+    -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted; /* 2 */
   }
   
   /**
@@ -346,4 +357,11 @@
   
   [hidden] {
     display: none;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }

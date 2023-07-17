@@ -82,5 +82,10 @@ gulp.task("html", function () {
     done();
   });
 
-gulp.task("build", gulp.series("del", "copy", "css", "html"));
+  gulp.task("fonts", function () {
+    return gulp.src("app/fonts/**/*.ttf")
+      .pipe(gulp.dest("build/fonts"));
+  });
+
+gulp.task("build", gulp.series("del", "copy", "fonts", "css", "html"));
 gulp.task("start", gulp.series("build", "server"));
