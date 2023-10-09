@@ -1,0 +1,111 @@
+.hero-slider {
+	position: relative;
+	width: 100%;
+
+	&__wrapper {
+		height: 84.1rem;
+	}
+
+  &__box {
+    height: 84.1rem;
+  }
+
+	&__card {
+		display: flex;
+		position: relative;
+		width: 130.2rem;
+		max-height: 76.8rem;
+		height: 76.8rem;
+
+		&-content {
+			display: flex;
+			flex-direction: column;
+			width: 41.2rem;
+			align-items: center;
+			margin-top: 24.2rem;
+		}
+
+		&-title {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 5.7rem;
+
+			.title {
+				margin-top: 2.2rem;
+			}
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-left: 1rem;
+			margin-bottom: 5.2rem;
+
+			.text-price {
+				margin-top: 1.9rem;
+			}
+		}
+
+		&-img {
+			width: 84.2rem;
+			height: 63.7rem;
+			position: absolute;
+			bottom: 3.5rem;
+			left: 11.2rem;
+			z-index: 3;
+			pointer-events: none;
+		}
+
+		&-brush-img {
+			position: absolute;
+			width: 133rem;
+			z-index: 2;
+			pointer-events: none;
+			height: 114.0629rem;
+			top: -28.4rem;
+		}
+		&-cloud-img {
+			position: absolute;
+			width: 116.7123rem;
+			height: 116.4996rem;
+			transform: rotate(132.22deg);
+			bottom: -17rem;
+			right: 14rem;
+			z-index: 2;
+			pointer-events: none;
+
+			&--second {
+				width: 114.8rem;
+				height: 64.7399rem;
+				bottom: 9rem;
+				right: -12.5rem;
+				transform: rotate(0deg);
+				z-index: 3;
+				opacity: 0.4;
+			}
+		}
+	}
+
+	&__dark-cloud {
+		position: absolute;
+		width: 62.8rem;
+		height: 68.5rem;
+		right: -16.1rem;
+		top: 9.3rem;
+	}
+
+	&__message {
+		display: flex;
+		position: absolute;
+		top: 7rem;
+		right: 5rem;
+		z-index: 3;
+		width: 10rem;
+
+		span:last-child {
+			margin-top: 7.8rem;
+		}
+	}
+}

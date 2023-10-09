@@ -1,0 +1,50 @@
+.footer {
+	padding-top: 12rem;
+	padding-bottom: 14rem;
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		width: 64.1rem;
+		text-align: center;
+		margin: 0 auto;
+		align-items: center;
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+		margin-top: 7.9rem;
+		margin-bottom: 5.7rem;
+		position: relative;
+
+		.text {
+			z-index: 2;
+		}
+
+		.text-strong {
+			z-index: 2;
+		}
+
+		.title {
+			margin-top: 2.2rem;
+			z-index: 2;
+		}
+
+		.logo {
+			top: auto;
+			bottom: 0rem;
+			right: -3.5rem;
+		}
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 5.1rem;
+
+		.text-price {
+			margin-top: 1.9rem;
+		}
+	}
+}
