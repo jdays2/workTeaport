@@ -1,124 +1,226 @@
+const rem = function (rem) {
+	if (window.innerWidth > 768) {
+		return 0.005208335 * window.innerWidth * rem;
+	} else {
+		return (100 / 375) * (0.1 * window.innerWidth) * rem;
+	}
+};
+
+const createPag = (activeIndex, classPart) => {
+	const wrapper = document.querySelector(`${classPart}`);
+	const current = wrapper.querySelector('.pag__current');
+	const bullet = wrapper.querySelector('.swiper-pagination-bullet');
+	if (bullet.classList.contains('swiper-pagination-bullet-active')) {
+		bullet.style.display = 'none';
+	} else {
+		bullet.style.display = 'block';
+	}
+
+	current.textContent = activeIndex;
+};
+
 const heroSlider = new Swiper('.hero-slider__box', {
-	direction: 'vertical',
+	slidesPerGroup: 1,
+	observer: true,
+	allowTouchMove:false,
+	effect: 'creative',
+	creativeEffect: {
+		prev: {
+			translate: [0, '-100%', 0],
+		},
+		next: {
+			translate: [0, '100%', 0],
+		},
+	},
+	updateOnWindowResize: true,
+	speed: 800,
 	pagination: {
-		el: '.swiper-pagination',
+		el: '.hero-slider .swiper-pagination',
 		clickable: true,
+		renderBullet: function (index, className) {
+			index++;
+			return '<span class="' + className + '">' + index + '</span>';
+		},
+	},
+
+	scrollbar: {
+		el: '.hero-slider .pag__scrollbar',
+	},
+
+	on: {
+		init: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.hero-slider');
+		},
+		beforeTransitionStart: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.hero-slider');
+		},
 	},
 });
 
-//bullets logic
-// const bullets = document.querySelectorAll('.swiper-pagination-bullet');
-// const bulletsWrapper = document.querySelector('.swiper-pagination');
-
-// const createElem = (type, className, content = '') => {
-// 	const element = document.createElement(type);
-// 	element.classList.add(className);
-// 	element.innerHTML = content;
-// 	return element;
-// };
-
-// const divElement = document.createElement('div');
-// divElement.classList.add('bullets-display');
-
-// const spanElement = document.createElement('span');
-// spanElement.classList.add('bullets-display__index');
-
-// divElement.appendChild(spanElement);
-
-// const setParams = (count, active) => {
-// 	const divHeight = divElement.offsetHeight;
-// 	const spanHeight = divHeight / count;
-// 	const offset = spanHeight * active;
-
-// 	spanElement.style.height = `${spanHeight}px`;
-// 	spanElement.style.transform = `translateY(${offset}px)`;
-// };
-
-// const showIndicator = () => {
-// 	const parentElement = document.querySelector(
-// 		'.swiper-pagination-bullet-active',
-// 	);
-// 	parentElement.appendChild(divElement);
-
-// 	setParams(bullets.length - 1, 0); // Показываем индикатор для предпоследнего элемента
-// };
-
-// // Вызываем функцию при загрузке страницы
-// window.addEventListener('DOMContentLoaded', showIndicator);
-
-// heroSlider.on('transitionEnd', () => {
-// 	const activeIndex = heroSlider.activeIndex;
-// 	const parentElement = document.querySelector(
-// 		'.swiper-pagination-bullet-active',
-// 	);
-
-// 	// Проверяем, есть ли уже div на данном элементе
-// 	const existingDiv = parentElement.querySelector('.bullets-display');
-// 	if (existingDiv) {
-// 		setParams(bullets.length - 1, activeIndex); // Обновляем параметры индикатора для активного элемента
-// 		return; // Если div уже существует, выходим из функции
-// 	}
-
-// 	parentElement.appendChild(divElement);
-
-// 	// Проверяем, является ли активный индекс последним
-// 	if (activeIndex === bullets.length - 1) {
-// 		setParams(bullets.length - 1, activeIndex - 1); // Устанавливаем предпоследний индекс для последнего элемента
-// 	} else {
-// 		setParams(bullets.length - 1, activeIndex); // Устанавливаем активный индекс для остальных элементов
-// 	}
-// });
-
-// bullets.forEach((element, idCurrent) => {
-// 	element.innerHTML = idCurrent + 1;
-// 	element.addEventListener('click', () => {
-// 		const parentElement = document.querySelector(
-// 			'.swiper-pagination-bullet-active',
-// 		);
-
-// 		// Проверяем, есть ли уже div на данном элементе
-// 		const existingDiv = parentElement.querySelector('.bullets-display');
-// 		if (existingDiv) {
-// 			return; // Если div уже существует, выходим из функции
-// 		}
-
-// 		// Проверяем, является ли кликнутый индекс последним
-// 		if (idCurrent === bullets.length - 1) {
-// 			setParams(bullets.length - 1, idCurrent - 1); // Устанавливаем предпоследний индекс для последнего элемента
-// 		} else {
-// 			setParams(bullets.length - 1, idCurrent); // Устанавливаем кликнутый индекс для остальных элементов
-// 		}
-
-// 		heroSlider.slideTo(idCurrent); // Переключаем слайдер на кликнутый элемент
-// 	});
-// });
-
 const moodSlider = new Swiper('.mood-slider', {
 	speed: 800,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
-  pagination: {
-		el: '.swiper-pagination',
+	slidesPerGroup: 4,
+	slidesPerView: 4,
+	spaceBetween: rem(5.4),
+	direction: 'horizontal',
+	observer: true,
+	updateOnWindowResize: true,
+
+	pagination: {
+		el: '.mood .swiper-pagination',
 		clickable: true,
+		renderBullet: function (index, className) {
+			index++;
+			return '<span class="' + className + '">' + index + '</span>';
+		},
+	},
+
+	scrollbar: {
+		el: '.mood .pag__scrollbar',
+	},
+
+	on: {
+		init: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.mood');
+		},
+		beforeTransitionStart: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.mood');
+		},
+	},
+});
+
+const ourSlider = new Swiper('.our-slider', {
+	speed: 800,
+	slidesPerGroup: 4,
+	slidesPerView: 4,
+	spaceBetween: rem(5.4),
+	direction: 'horizontal',
+	observer: true,
+	updateOnWindowResize: true,
+
+	pagination: {
+		el: '.our .swiper-pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			index++;
+			return '<span class="' + className + '">' + index + '</span>';
+		},
+	},
+
+	scrollbar: {
+		el: '.our .pag__scrollbar',
+	},
+
+	on: {
+		init: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.our');
+		},
+		beforeTransitionStart: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.our');
+		},
 	},
 });
 
 const popularSlider = new Swiper('.popular-slider', {
 	speed: 800,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
-  pagination: {
-		el: '.swiper-pagination',
+	slidesPerGroup: 4,
+	slidesPerView: 4,
+	spaceBetween: rem(5.4),
+	direction: 'horizontal',
+	observer: true,
+	updateOnWindowResize: true,
+
+	pagination: {
+		el: '.popular .swiper-pagination',
 		clickable: true,
+		renderBullet: function (index, className) {
+			index++;
+			return '<span class="' + className + '">' + index + '</span>';
+		},
+	},
+
+	scrollbar: {
+		el: '.popular .pag__scrollbar',
+	},
+
+	on: {
+		init: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.popular');
+		},
+		beforeTransitionStart: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.popular');
+		},
 	},
 });
 
 const countrySlider = new Swiper('.country-slider', {
 	speed: 800,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
-  pagination: {
-		el: '.swiper-pagination',
+	slidesPerGroup: 4,
+	slidesPerView: 4,
+	spaceBetween: rem(5.4),
+	direction: 'horizontal',
+	observer: true,
+	updateOnWindowResize: true,
+
+	pagination: {
+		el: '.country .swiper-pagination',
 		clickable: true,
+		renderBullet: function (index, className) {
+			index++;
+			return '<span class="' + className + '">' + index + '</span>';
+		},
+	},
+
+	scrollbar: {
+		el: '.country .pag__scrollbar',
+	},
+
+	on: {
+		init: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.country');
+		},
+		beforeTransitionStart: function () {
+			const activeSlideIndex = this.realIndex;
+			const slidesPerGroup = this.params.slidesPerGroup;
+			const activePaginationIndex =
+				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
+			createPag(activePaginationIndex, '.country');
+		},
 	},
 });

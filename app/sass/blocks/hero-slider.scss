@@ -6,9 +6,52 @@
 		height: 84.1rem;
 	}
 
-  &__box {
-    height: 84.1rem;
-  }
+	&__box {
+		height: 84.1rem;
+	}
+
+	.swiper-pagination {
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
+		height: fit-content;
+	}
+
+	.pag {
+		top: 23.3rem;
+		right: 15.7rem;
+		width: -webkit-fit-content;
+		width: -moz-fit-content;
+		width: fit-content;
+		min-width: -webkit-fit-content;
+		min-width: -moz-fit-content;
+		min-width: fit-content;
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		gap: 6.5rem;
+		align-items: center;
+
+		.swiper-pagination-bullets {
+			height: -webkit-fit-content;
+			height: -moz-fit-content;
+			height: fit-content;
+			position: static;
+			transform: none;
+			flex-direction: column;
+		}
+		.swiper-pagination {
+			width: -webkit-fit-content;
+			width: -moz-fit-content;
+			width: fit-content;
+		}
+
+		&__scrollbar-wrapper {
+			transform: rotate(-90deg);
+		}
+	}
 
 	&__card {
 		display: flex;
