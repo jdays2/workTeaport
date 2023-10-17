@@ -6,7 +6,6 @@
 	justify-content: space-between;
 	align-items: center;
 	margin-top: 2.5rem;
-	
 
 	&__burger-btn {
 		width: 2.5rem;
@@ -78,12 +77,79 @@
 		width: 3.4rem;
 		height: 3.4rem;
 		cursor: pointer;
-		
+
 		svg {
 			width: 100%;
 			height: 100%;
 			-o-object-fit: contain;
 			object-fit: contain;
 		}
+	}
+
+	@media (max-width: 48em) {
+		width: 69.8rem;
+		height: 16.6rem;
+		margin-top: 7.6rem;
+
+		.logo {
+			right: -0.9rem;
+		}
+
+		.header {
+			
+			&__burger-btn {
+				width: 5rem;
+				height: 4.6rem;
+			}
+			&__link {
+				display: none;
+			}
+
+			&__links-bar {
+				width: -webkit-fit-content;
+				width: -moz-fit-content;
+				width: fit-content;
+			}
+
+			&__link-icon--profile {
+				display: none;
+			}
+
+			&__link-icon {
+				width: 5.6rem;
+				height: 6.8rem;
+			}
+
+			&__title {
+				margin-bottom: 0.7rem;
+
+				font-size: 4rem;
+				font-weight: 300;
+				letter-spacing: 1.2rem;
+
+				span {
+					font-size: 4rem;
+					font-style: normal;
+					font-weight: 700;
+					line-height: normal;
+					letter-spacing: 1.2rem;
+				}
+			}
+
+			&__subtitle {
+				font-size: 2rem;
+				font-style: normal;
+				font-weight: 400;
+				line-height: normal;
+				letter-spacing: 1.4rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 48em) {
+	.logo {
+		width: 10.4rem;
+		height: 18.6rem;
 	}
 }

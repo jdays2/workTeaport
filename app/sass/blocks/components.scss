@@ -58,6 +58,28 @@
 			}
 		}
 	}
+
+	@media (max-width: 48em) {
+		width: 46.4rem;
+		height: 13.6rem;
+
+		span {
+			font-size: 3rem;
+			font-weight: 700;
+			letter-spacing: 0.9rem;
+			margin-top: 0.4rem;
+			margin-right: 1.50rem;
+		}
+
+		.link {
+			&__arrow-icon {
+				width: 13.4rem;
+				height: 10rem;
+			}
+
+		
+		}
+	}
 }
 
 .link--dark {
@@ -189,6 +211,10 @@
 		padding-top: 19rem;
 		padding-bottom: 0rem;
 	}
+
+	@media (max-width: 48em) {
+		width: 69.8rem;
+	}
 }
 
 .slider-title {
@@ -199,7 +225,6 @@
 	.text {
 		margin-bottom: 2rem;
 	}
-
 }
 
 .logo {
@@ -209,7 +234,6 @@
 	right: -1.9rem;
 	top: -5rem;
 	z-index: 1;
-
 }
 
 .pag {
@@ -254,8 +278,8 @@
 
 		&-wrapper {
 			position: relative;
-			min-width: 6.8rem ;
-			height: 2px ;
+			min-width: 6.8rem;
+			height: 2px;
 		}
 
 		.swiper-scrollbar-drag {

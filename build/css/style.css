@@ -499,7 +499,62 @@ body {
   -o-object-fit: contain;
   object-fit: contain;
 }
+@media (max-width: 48em) {
+  .header {
+    width: 69.8rem;
+    height: 16.6rem;
+    margin-top: 7.6rem;
+  }
+  .header .logo {
+    right: -0.9rem;
+  }
+  .header .header__burger-btn {
+    width: 5rem;
+    height: 4.6rem;
+  }
+  .header .header__link {
+    display: none;
+  }
+  .header .header__links-bar {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .header .header__link-icon--profile {
+    display: none;
+  }
+  .header .header__link-icon {
+    width: 5.6rem;
+    height: 6.8rem;
+  }
+  .header .header__title {
+    margin-bottom: 0.7rem;
+    font-size: 4rem;
+    font-weight: 300;
+    letter-spacing: 1.2rem;
+  }
+  .header .header__title span {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.2rem;
+  }
+  .header .header__subtitle {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.4rem;
+  }
+}
 
+@media (max-width: 48em) {
+  .logo {
+    width: 10.4rem;
+    height: 18.6rem;
+  }
+}
 .link {
   height: 7.25rem;
   width: 24.8rem;
@@ -556,6 +611,23 @@ body {
   }
   .link:hover .icon-arrow {
     fill: #fff;
+  }
+}
+@media (max-width: 48em) {
+  .link {
+    width: 46.4rem;
+    height: 13.6rem;
+  }
+  .link span {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.9rem;
+    margin-top: 0.4rem;
+    margin-right: 1.5rem;
+  }
+  .link .link__arrow-icon {
+    width: 13.4rem;
+    height: 10rem;
   }
 }
 
@@ -687,6 +759,11 @@ body {
 .section--inst {
   padding-top: 19rem;
   padding-bottom: 0rem;
+}
+@media (max-width: 48em) {
+  .section {
+    width: 69.8rem;
+  }
 }
 
 .slider-title {
@@ -1018,6 +1095,31 @@ body {
 }
 .footer__body .text-price {
   margin-top: 1.9rem;
+}
+@media (max-width: 48em) {
+  .footer {
+    padding-top: 30rem;
+    padding-bottom: 30rem;
+  }
+  .footer .logo {
+    width: 18.8rem;
+    height: 33.8rem;
+    bottom: 6rem;
+    right: -8.5rem;
+  }
+  .footer .footer__title {
+    margin-top: 20rem;
+    margin-bottom: 4.8rem;
+  }
+  .footer .footer__title .title {
+    margin-top: 4.4rem;
+  }
+  .footer .footer__body {
+    margin-bottom: 7rem;
+  }
+  .footer .footer__body .text-price {
+    margin-top: 2.8rem;
+  }
 }
 
 .hero-slider {
