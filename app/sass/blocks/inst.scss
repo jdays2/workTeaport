@@ -15,7 +15,6 @@
 			margin-top: 1.9rem;
 			display: flex;
 			flex-direction: column;
-
 		}
 
 		&-title {
@@ -44,7 +43,6 @@
 		span {
 			color: #fff;
 			text-align: center;
-			font-family: "Inria Sans";
 			font-size: 2.5rem;
 			font-style: normal;
 			font-weight: 700;
@@ -66,8 +64,8 @@
 		img {
 			width: 24.3rem;
 			height: 24.3rem;
-			border: 0.8rem solid #EBEBEB;
-			background-color: #EBEBEB;
+			border: 0.8rem solid #ebebeb;
+			background-color: #ebebeb;
 			-o-object-fit: cover;
 			object-fit: cover;
 			border-radius: 50%;
@@ -124,7 +122,6 @@
 			font-style: normal;
 			font-weight: 300;
 			line-height: normal;
-			
 		}
 	}
 
@@ -143,6 +140,102 @@
 			height: 100%;
 			-o-object-fit: cover;
 			object-fit: cover;
+		}
+	}
+
+	@media (max-width: 48em) {
+		.inst {
+			gap: 5.6rem;
+
+			&__image {
+				width: 11.36rem * 2;
+				height: 11.3rem * 2;
+			}
+
+			&__body {
+				gap: 0.402rem * 2;
+			}
+
+			&__head {
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				gap: 6.4rem;
+
+				&-content {
+					margin: 0;
+				}
+
+				&-title {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					gap: 0;
+					margin-bottom: 4rem;
+
+					strong {
+						font-size: 6rem;
+						font-style: normal;
+						font-weight: 700;
+					}
+				}
+			}
+
+			&__stats {
+				margin-bottom: 5.6rem;
+				&-item {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					gap: 0;
+
+					strong {
+						font-size: 3rem;
+						font-weight: 700;
+					}
+
+					span {
+						font-size: 3rem;
+						font-weight: 300;
+					}
+				}
+			}
+
+			&__discription {
+				gap: 3.6rem;
+				strong {
+					font-size: 3rem;
+					font-weight: 700;
+				}
+
+				p {
+					font-size: 3rem;
+					font-weight: 300;
+				}
+			}
+
+			&__profile-photo {
+				width: 19.9rem * 2;
+				height: 19.9rem * 2;
+
+				img {
+					width: 17.8439rem * 2;
+					height: 17.8439rem * 2;
+					border: 1.1rem solid #ebebeb;
+				}
+			}
+
+			&__follow-btn {
+				height: 6rem;
+				border-radius: 0.4943rem * 2;
+
+				span {
+					font-size: 3rem;
+					font-style: normal;
+					font-weight: 700;
+				}
+			}
 		}
 	}
 }

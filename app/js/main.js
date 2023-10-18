@@ -22,7 +22,7 @@ const createPag = (activeIndex, classPart) => {
 const heroSlider = new Swiper('.hero-slider__box', {
 	slidesPerGroup: 1,
 	observer: true,
-	allowTouchMove:false,
+	allowTouchMove: false,
 	effect: 'creative',
 	creativeEffect: {
 		prev: {
@@ -67,9 +67,7 @@ const heroSlider = new Swiper('.hero-slider__box', {
 
 const moodSlider = new Swiper('.mood-slider', {
 	speed: 800,
-	slidesPerGroup: 4,
-	slidesPerView: 4,
-	spaceBetween: rem(5.4),
+
 	direction: 'horizontal',
 	observer: true,
 	updateOnWindowResize: true,
@@ -87,6 +85,24 @@ const moodSlider = new Swiper('.mood-slider', {
 		el: '.mood .pag__scrollbar',
 	},
 
+	breakpoints: {
+		769: {
+			slidesPerGroup: 4,
+			slidesPerView: 4,
+			spaceBetween: rem(5.4),
+			scrollbar: {
+				enabled: true,
+			},
+		},
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1.72,
+			spaceBetween: rem(1.8),
+			scrollbar: {
+				enabled: false,
+			},
+		},
+	},
 	on: {
 		init: function () {
 			const activeSlideIndex = this.realIndex;
@@ -107,9 +123,7 @@ const moodSlider = new Swiper('.mood-slider', {
 
 const ourSlider = new Swiper('.our-slider', {
 	speed: 800,
-	slidesPerGroup: 4,
-	slidesPerView: 4,
-	spaceBetween: rem(5.4),
+
 	direction: 'horizontal',
 	observer: true,
 	updateOnWindowResize: true,
@@ -127,6 +141,24 @@ const ourSlider = new Swiper('.our-slider', {
 		el: '.our .pag__scrollbar',
 	},
 
+	breakpoints: {
+		769: {
+			slidesPerGroup: 4,
+			slidesPerView: 4,
+			spaceBetween: rem(5.4),
+			scrollbar: {
+				enabled: true,
+			},
+		},
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1.72,
+			spaceBetween: rem(1.8),
+			scrollbar: {
+				enabled: false,
+			},
+		},
+	},
 	on: {
 		init: function () {
 			const activeSlideIndex = this.realIndex;
@@ -147,9 +179,7 @@ const ourSlider = new Swiper('.our-slider', {
 
 const popularSlider = new Swiper('.popular-slider', {
 	speed: 800,
-	slidesPerGroup: 4,
-	slidesPerView: 4,
-	spaceBetween: rem(5.4),
+
 	direction: 'horizontal',
 	observer: true,
 	updateOnWindowResize: true,
@@ -167,6 +197,24 @@ const popularSlider = new Swiper('.popular-slider', {
 		el: '.popular .pag__scrollbar',
 	},
 
+	breakpoints: {
+		769: {
+			slidesPerGroup: 4,
+			slidesPerView: 4,
+			spaceBetween: rem(5.4),
+			scrollbar: {
+				enabled: true,
+			},
+		},
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1.72,
+			spaceBetween: rem(1.8),
+			scrollbar: {
+				enabled: false,
+			},
+		},
+	},
 	on: {
 		init: function () {
 			const activeSlideIndex = this.realIndex;
@@ -187,9 +235,7 @@ const popularSlider = new Swiper('.popular-slider', {
 
 const countrySlider = new Swiper('.country-slider', {
 	speed: 800,
-	slidesPerGroup: 4,
-	slidesPerView: 4,
-	spaceBetween: rem(5.4),
+
 	direction: 'horizontal',
 	observer: true,
 	updateOnWindowResize: true,
@@ -207,6 +253,24 @@ const countrySlider = new Swiper('.country-slider', {
 		el: '.country .pag__scrollbar',
 	},
 
+	breakpoints: {
+		769: {
+			slidesPerGroup: 4,
+			slidesPerView: 4,
+			spaceBetween: rem(5.4),
+			scrollbar: {
+				enabled: true,
+			},
+		},
+		320: {
+			slidesPerGroup: 1,
+			slidesPerView: 1.73,
+			spaceBetween: rem(1.9),
+			scrollbar: {
+				enabled: false,
+			},
+		},
+	},
 	on: {
 		init: function () {
 			const activeSlideIndex = this.realIndex;
