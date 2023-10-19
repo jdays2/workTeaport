@@ -17,7 +17,7 @@
 
 	.pag {
 		top: 24.3rem;
-    right: 30.7rem;
+		right: 30.7rem;
 		width: -webkit-fit-content;
 		width: -moz-fit-content;
 		width: fit-content;
@@ -145,13 +145,41 @@
 				height: -webkit-fit-content;
 				height: -moz-fit-content;
 				height: fit-content;
+				padding-bottom: 9.8rem * 2;
 
 				&-content {
 					width: 27rem * 2;
-					margin-top: 38.3rem * 2;
+					margin: 0 auto;
+					margin-top: 76.8rem;
 					display: flex;
 					flex-direction: column;
 				}
+
+				&-image {
+					width: 138rem;
+					height: 85.4rem;
+					left: -31.5rem;
+					top: -15.2rem;
+				}
+			}
+		}
+
+		.pag {
+			top: auto;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: 0;
+
+			flex-direction: row;
+
+			.swiper-pagination {
+				display: flex;
+				flex-direction: row;
+			}
+
+			&__scrollbar-wrapper {
+				display: flex;
+				transform: none;
 			}
 		}
 	}

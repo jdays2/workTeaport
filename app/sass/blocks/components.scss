@@ -96,7 +96,7 @@
 	.link--dark {
 		height: 7.2rem * 2;
 		width: 13.4rem * 2;
-		
+
 		.link__bg-desc {
 			display: none;
 		}
@@ -104,7 +104,6 @@
 		.link__bg-mob {
 			display: block;
 			margin-right: 1.2rem;
-
 		}
 
 		.link__text {
@@ -250,7 +249,12 @@
 	}
 
 	@media (max-width: 48em) {
-		width: 69.8rem;
+		width: 34.9rem*2;
+		padding-bottom: 15.2rem*2;
+
+		&--hero {
+			width: 100%;
+		}
 	}
 }
 
@@ -278,6 +282,7 @@
 	align-items: center;
 	gap: 3.6rem;
 	min-width: 34rem;
+	z-index: 10;
 
 	color: #393531;
 	text-align: center;
@@ -330,6 +335,7 @@
 		.pag {
 			&__scrollbar-wrapper {
 				display: none;
+				width: 6.8rem*2;
 			}
 
 			&__current {
@@ -341,6 +347,11 @@
 				font-size: 3rem;
 				font-weight: 700;
 				letter-spacing: 0.9rem;
+			}
+
+			&__scrollbar {
+				width: 100% !important;
+				height: 2px !important;
 			}
 		}
 

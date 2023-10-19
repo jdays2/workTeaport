@@ -144,6 +144,7 @@
 		height: 4.2rem;
 		border: 0.2rem solid #fff;
 		background-color: #a9b5b7;
+		visibility: hidden;
 
 		&--minus {
 			span {
@@ -226,6 +227,10 @@
 		width: 26rem;
 		height: 26rem;
 		margin-top: 1.5rem;
+		img {
+			-o-object-fit: contain;
+			   object-fit: contain;
+		}
 	}
 
 	.hor-slider__item-text {
@@ -529,7 +534,7 @@
 		.hor-slider {
 			&__item {
 				&__title {
-					bottom: 23.2rem*2;
+					bottom: 23.2rem * 2;
 					top: auto;
 				}
 
@@ -576,5 +581,9 @@
 		box-shadow: none;
 		background: linear-gradient(180deg, #fff 0%, #fff 100%);
 		border-color: #fff;
+
+		.hor-slider__item-cart-btn {
+			visibility: visible;
+		}
 	}
 }
