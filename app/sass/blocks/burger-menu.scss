@@ -97,6 +97,10 @@
 		border-bottom: 0.2rem solid #ece2d7;
 		margin-bottom: 10.1rem;
 
+		&-filter {
+			display: none;
+		}
+
 		&-link {
 			width: -webkit-fit-content;
 			width: -moz-fit-content;

@@ -2147,6 +2147,9 @@ body {
   border-bottom: 0.2rem solid #ece2d7;
   margin-bottom: 10.1rem;
 }
+.burger-menu__nav-filter {
+  display: none;
+}
 .burger-menu__nav-link {
   width: -webkit-fit-content;
   width: -moz-fit-content;
