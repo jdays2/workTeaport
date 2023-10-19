@@ -6,7 +6,10 @@
 					src="./img/icon/crest-icon.svg"
 					alt="" />
 			</div>
-			<a href="https:/instagram.com" target="_blank" class="burger-menu__link-icon">
+			<a
+				href="https:/instagram.com"
+				target="_blank"
+				class="burger-menu__link-icon burger-menu__link-icon--inst">
 				<img
 					src="./img/icon/inst-icon.webp"
 					alt="" />
@@ -22,7 +25,7 @@
 
 			<span class="logo">
 				<img
-					src="../img/icon/burger-logo-icon.svg"
+					src="./img/icon/burger-logo-icon.svg"
 					alt="" />
 			</span>
 		</div>
@@ -43,16 +46,11 @@
 		</a>
 	</div>
 
-	<nav class="section burger-menu__nav">
-		<a
-			href="/"
-			class="burger-menu__nav-link">
-			<label>
-				<input
-					type="radio"
-					name="nav"
-					checked />
-
+	<div class="section burger-menu__nav select">
+		<div class="burger-menu__nav-item-wrapper">
+			<a
+				href="/"
+				class="burger-menu__nav-link select-item active">
 				<strong class="text-strong">каталог</strong>
 				<span class="burger-menu__status-icon">
 					<svg
@@ -68,169 +66,245 @@
 							fill="#393531" />
 					</svg>
 				</span>
-			</label>
+			</a>
+
+			<div class="burger-menu__nav-filter select">
+				<div class="burger-menu__nav-filter-wrapper select-item active">
+					<div class="burger-menu__nav-filter-item">
+						<span>По цвету</span>
+						<span class="burger-menu__nav-filter-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="19"
+								viewBox="0 0 24 19"
+								fill="none">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+									fill="#393531" />
+							</svg>
+						</span>
+					</div>
+
+					<div class="burger-menu__nav-filter-list">
+						<div>зеленые чаи</div>
+						<div>белые чаи</div>
+						<div>красные чаи</div>
+						<div>черные чаи</div>
+						<div>цветочные чаи</div>
+					</div>
+				</div>
+				<div class="burger-menu__nav-filter-wrapper select-item">
+					<div class="burger-menu__nav-filter-item">
+						<span>По настроению</span>
+						<span class="burger-menu__nav-filter-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="19"
+								viewBox="0 0 24 19"
+								fill="none">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+									fill="#393531" />
+							</svg>
+						</span>
+					</div>
+
+					<div class="burger-menu__nav-filter-list">
+						<div>Для бодрости</div>
+						<div>Против стресса</div>
+						<div>Для расслабления</div>
+					</div>
+				</div>
+				<div class="burger-menu__nav-filter-wrapper select-item ">
+					<div class="burger-menu__nav-filter-item">
+						<span>По странам</span>
+						<span class="burger-menu__nav-filter-icon">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="19"
+								viewBox="0 0 24 19"
+								fill="none">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+									fill="#393531" />
+							</svg>
+						</span>
+					</div>
+
+					<div class="burger-menu__nav-filter-list">
+						<div>Китайские чаи</div>
+						<div>Индийские чаи</div>
+						<div>Японские чаи</div>
+						<div>УЗбекские чаи</div>
+						<div>Русские чаи</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<a
+			href="/"
+			class="burger-menu__nav-link select-item">
+			<strong class="text-strong">доставка и оплата</strong>
+			<span class="burger-menu__status-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="19"
+					viewBox="0 0 24 19"
+					fill="none">
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+						fill="#393531" />
+				</svg>
+			</span>
 		</a>
 
 		<a
 			href="/"
-			class="burger-menu__nav-link">
-			<label>
-				<input
-					type="radio"
-					name="nav" />
-
-				<strong class="text-strong">доставка и оплата</strong>
-				<span class="burger-menu__status-icon">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="19"
-						viewBox="0 0 24 19"
-						fill="none">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
-							fill="#393531" />
-					</svg>
-				</span>
-			</label>
+			class="burger-menu__nav-link select-item">
+			<strong class="text-strong">База знаний</strong>
+			<span class="burger-menu__status-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="19"
+					viewBox="0 0 24 19"
+					fill="none">
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+						fill="#393531" />
+				</svg>
+			</span>
 		</a>
 
 		<a
 			href="/"
-			class="burger-menu__nav-link">
-			<label>
-				<input
-					type="radio"
-					name="nav" />
-
-				<strong class="text-strong">База знаний</strong>
-				<span class="burger-menu__status-icon">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="19"
-						viewBox="0 0 24 19"
-						fill="none">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
-							fill="#393531" />
-					</svg>
-				</span>
-			</label>
+			class="burger-menu__nav-link select-item">
+			<strong class="text-strong">контакты</strong>
+			<span class="burger-menu__status-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="19"
+					viewBox="0 0 24 19"
+					fill="none">
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+						fill="#393531" />
+				</svg>
+			</span>
 		</a>
 
 		<a
 			href="/"
-			class="burger-menu__nav-link">
-			<label>
-				<input
-					type="radio"
-					name="nav" />
-
-				<strong class="text-strong">контакты</strong>
-				<span class="burger-menu__status-icon">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="19"
-						viewBox="0 0 24 19"
-						fill="none">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
-							fill="#393531" />
-					</svg>
-				</span>
-			</label>
+			class="burger-menu__nav-link select-item">
+			<strong class="text-strong">личный кабинет</strong>
+			<span class="burger-menu__status-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="19"
+					viewBox="0 0 24 19"
+					fill="none">
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+						fill="#393531" />
+				</svg>
+			</span>
 		</a>
 
 		<a
 			href="/"
-			class="burger-menu__nav-link">
-			<label>
-				<input
-					type="radio"
-					name="nav" />
-
-				<strong class="text-strong">личный кабинет</strong>
-				<span class="burger-menu__status-icon">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="19"
-						viewBox="0 0 24 19"
-						fill="none">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
-							fill="#393531" />
-					</svg>
-				</span>
-			</label>
+			class="burger-menu__nav-link select-item">
+			<strong class="text-strong">корзина</strong>
+			<span class="burger-menu__status-icon">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="19"
+					viewBox="0 0 24 19"
+					fill="none">
+					<path
+						fill-rule="evenodd"
+						clip-rule="evenodd"
+						d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
+						fill="#393531" />
+				</svg>
+			</span>
 		</a>
-
-		<a
-			href="/"
-			class="burger-menu__nav-link">
-			<label>
-				<input
-					type="radio"
-					name="nav" />
-
-				<strong class="text-strong">корзина</strong>
-				<span class="burger-menu__status-icon">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="24"
-						height="19"
-						viewBox="0 0 24 19"
-						fill="none">
-						<path
-							fill-rule="evenodd"
-							clip-rule="evenodd"
-							d="M15.8687 17.0884C13.867 19.6021 10.0478 19.6021 8.0461 17.0884C7.32472 16.1826 7.44231 14.8927 7.7718 13.7825C7.89244 13.3761 7.9572 12.9456 7.9572 12.5C7.9572 10.0147 5.94249 8 3.4572 8C2.75409 8 2.08864 8.16126 1.49582 8.4488C1.35942 8.51496 1.19347 8.48333 1.09903 8.36475C-1.50947 5.08915 0.823008 0.25 5.01035 0.25H11.9574H18.9045C23.0918 0.25 25.4243 5.08915 22.8158 8.36475C22.7213 8.48342 22.5552 8.51506 22.4187 8.44885C21.8258 8.16127 21.1604 8 20.4572 8C17.9719 8 15.9572 10.0147 15.9572 12.5C15.9572 12.9458 16.022 13.3765 16.1428 13.7831C16.4724 14.893 16.59 16.1827 15.8687 17.0884Z"
-							fill="#393531" />
-					</svg>
-				</span>
-			</label>
-		</a>
-	</nav>
+	</div>
 
 	<div class="section burger-menu__filter">
 		<div class="burger-menu__filter-col left">
 			<p class="burger-menu__filter-title">По цвету</p>
 			<ul class="burger-menu__filter-list select">
-				<span class="burger-menu__filter-item text select-item active">зеленые чаи</span>
-				<span class="burger-menu__filter-item text select-item">чаикрасные чаи</span>
-				<span class="burger-menu__filter-item text select-item">черные чаи</span>
-				<span class="burger-menu__filter-item text select-item">цветочные чаи</span>
+				<span class="burger-menu__filter-item text select-item active">
+					зеленые чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					чаикрасные чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					черные чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					цветочные чаи
+				</span>
 				<span class="burger-menu__filter-item text select-item">пуэр</span>
 			</ul>
 		</div>
 
-    <div class="burger-menu__filter-col">
+		<div class="burger-menu__filter-col">
 			<p class="burger-menu__filter-title">По настроению</p>
 			<ul class="burger-menu__filter-list select">
-				<span class="burger-menu__filter-item text select-item active">Для бодрости</span>
-				<span class="burger-menu__filter-item text select-item">Против стресса</span>
-				<span class="burger-menu__filter-item text select-item">Для расслабления</span>
+				<span class="burger-menu__filter-item text select-item active">
+					Для бодрости
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					Против стресса
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					Для расслабления
+				</span>
 			</ul>
 		</div>
 
-    <div class="burger-menu__filter-col right">
+		<div class="burger-menu__filter-col right">
 			<p class="burger-menu__filter-title">По странам</p>
 			<ul class="burger-menu__filter-list select">
-				<span class="burger-menu__filter-item text select-item active">Китайские чаи</span>
-				<span class="burger-menu__filter-item text select-item">Индийские чаи</span>
-				<span class="burger-menu__filter-item text select-item">Японские чаи</span>
-				<span class="burger-menu__filter-item text select-item">УЗбекские чаи</span>
-				<span class="burger-menu__filter-item text select-item">Русские чаи</span>
+				<span class="burger-menu__filter-item text select-item active">
+					Китайские чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					Индийские чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					Японские чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					УЗбекские чаи
+				</span>
+				<span class="burger-menu__filter-item text select-item">
+					Русские чаи
+				</span>
 			</ul>
 		</div>
 	</div>
