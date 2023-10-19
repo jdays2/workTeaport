@@ -1,35 +1,14 @@
 .main {
+	margin: 0;
 	width: 100%;
+	background-image: url('../../img/main/main-bg.webp');
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: 100%;
 	overflow: hidden;
 
-	&__wrapper {
-		display: flex;
-		flex-direction: column;
-		gap: 15.2rem;
-		width: 100%;
-	}
-
-	&__content {
-		background-image: url('../../img/main/main-bg.webp');
-		background-repeat: no-repeat;
-		background-position: center top;
-		background-size: 100%;
-	}
-}
-
-
-
-@media (hover: hover) {
-	.hor-slider__item-content:hover {
-		box-shadow: 0rem -6rem 15rem 0rem #feffcd inset;
-		border-color: #feffcd;
-		cursor: pointer;
-	}
-
-	.hor-slider__item-content--white:hover {
-		border-radius: 17.85rem;
-		box-shadow: none;
-		background: linear-gradient(180deg, #fff 0%, #fff 100%);
-		border-color: #fff;
+	@media (max-width: 48em) {
+		background-image: url('../../img/main/main-bg-mob.webp');
+		background-size: 100% 538.2rem*2;
 	}
 }

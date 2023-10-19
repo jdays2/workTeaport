@@ -8,6 +8,15 @@
 		justify-content: space-between;
 	}
 
+	&__center {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 72.9rem;
+
+	}
+
 	&__left-side {
 		display: flex;
 		flex-direction: column;
@@ -15,7 +24,7 @@
 		align-items: center;
 		text-align: center;
 		margin-top: 15rem;
-    z-index: 2;
+		z-index: 2;
 
 		&-title {
 			margin-top: 4.4rem;
@@ -39,7 +48,7 @@
 		height: -moz-fit-content;
 		height: fit-content;
 		justify-content: space-between;
-    z-index: 2;
+		z-index: 2;
 
 		&-title {
 			margin-top: 2.2rem;
@@ -62,9 +71,9 @@
 
 	&__center-image {
 		position: absolute;
-    z-index: 1;
+		z-index: 1;
 		width: 192rem;
-		height: 72.9rem;
+		height: 100%;
 		left: 50%;
 		transform: translateX(-50%);
 
@@ -76,18 +85,55 @@
 		}
 	}
 
-  &__message {
-    width: 7rem;
-    display: flex;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    z-index: 2;
+	&__message {
+		width: 7rem;
+		display: flex;
+		height: -webkit-fit-content;
+		height: -moz-fit-content;
+		height: fit-content;
+		z-index: 2;
+		margin-bottom: auto;
 
+		.text-chns:last-child {
+			margin-top: 9.4rem;
+		}
+	}
+}
 
-    .text-chns:last-child {
-      margin-top: 9.4rem;
-      
-    }
-  }
+@media (max-width: 48em) {
+	.seo {
+		height: auto;
+		&__box {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&__left-side {
+			margin:0;
+			margin-bottom: 8rem;
+			width: 100%;
+
+			&-title {
+				margin-bottom: 8rem;
+			}
+
+			.link {
+				margin-top: 6.4rem;
+			}
+		}
+
+		&__right-side {
+			margin-top: 8rem;
+			width: 100%;
+
+			&-title {
+				margin-top: 4.4rem;
+				margin-bottom: 8rem;
+			}
+
+			&-subtitle {
+				margin-bottom: 3.6rem;
+			}
+		}
+	}
 }
