@@ -22,3 +22,28 @@ const setSelects = () => {
 };
 
 document.addEventListener('DOMContentLoaded', setSelects);
+
+//выбор select, но с закрытием при повторном клике по итему
+const selectFatherClose = document.querySelectorAll('.select-close');
+
+const setCloseSelects = () => {
+	if (selectFatherClose) {
+		selectFatherClose.forEach((select) => {
+			const childs = select.querySelectorAll('.select-item');
+
+			childs.forEach((current) => {
+				current.addEventListener('click', () => {
+					childs.forEach((item) => {
+						if (current === item && !item.classList.contains('active')) {
+							current.classList.add(activeClass);
+						} else {
+							item.classList.remove(activeClass);
+						}
+					});
+				});
+			});
+		});
+	}
+};
+
+document.addEventListener('DOMContentLoaded', setCloseSelects);
