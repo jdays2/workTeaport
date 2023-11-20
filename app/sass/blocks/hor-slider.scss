@@ -217,7 +217,8 @@
 	}
 }
 
-.popular-slider {
+.popular-slider,
+.products-list-swiper {
 	.hor-slider__item {
 		height: 50.4rem;
 		padding-bottom: 0.2rem;
@@ -285,6 +286,12 @@
 .mood-slider {
 	.hor-slider__item-text {
 		margin-top: 3.3rem;
+	}
+	.hor-slider__item-img {
+		img {
+			-o-object-fit: contain;
+			   object-fit: contain;
+		}
 	}
 }
 
