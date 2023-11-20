@@ -2,8 +2,11 @@
 @import './general/normalize.scss';
 @import './general/set.scss';
 
+@import './pages/contacts.scss';
 @import './pages/main.scss';
 @import './pages/catalog.scss';
+@import './pages/cart.scss';
+
 @import './blocks/header.scss';
 @import './blocks/components.scss';
 @import './blocks/inst.scss';
@@ -13,4 +16,5 @@
 @import './blocks/burger-menu.scss';
 @import './blocks/seo.scss';
 @import './blocks/catalog-hero.scss';
-@import './blocks/products-list.scss'
+@import './blocks/products-list.scss';
+@import './blocks/contacts-box.scss';

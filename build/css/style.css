@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Inria Sans";
   font-weight: normal;
@@ -366,6 +367,22 @@ body {
     -webkit-text-size-adjust: none;
   }
 }
+.contacts {
+  margin: 0;
+  width: 100%;
+  background-image: url("../img/webp/contacts-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  overflow: hidden;
+}
+@media (max-width: 48em) {
+  .contacts {
+    background-image: url("../img/webp/contacts-bg-mob.webp");
+    background-size: 100% 389.2rem;
+  }
+}
+
 .main {
   margin: 0;
   width: 100%;
@@ -399,6 +416,107 @@ body {
 }
 .catalog .seo {
   padding-bottom: 30rem;
+}
+
+.cart {
+  margin: 0;
+  width: 100%;
+  background-image: url("../img/webp/cart-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+  overflow: hidden;
+}
+@media (max-width: 48em) {
+  .cart {
+    background-image: url("../img/webp/cart-bg-mob.webp");
+    background-size: 100% 810.6rem;
+  }
+}
+.cart__title {
+  margin-bottom: 4.8rem;
+  margin-top: 4.8rem;
+}
+.cart__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cart__summary {
+  width: 36rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  border-radius: 5rem;
+  border: 0.2rem solid rgba(255, 255, 255, 0);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(2.14%, rgba(255, 255, 255, 0.1)), to(rgba(189, 193, 192, 0.1)));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 2.14%, rgba(189, 193, 192, 0.1) 100%);
+  -webkit-box-shadow: 0px -6rem 15rem 0px #feffcd inset;
+          box-shadow: 0px -6rem 15rem 0px #feffcd inset;
+  position: relative;
+}
+.cart__summary-chns {
+  width: 8.4rem;
+  top: -6.6rem;
+  position: absolute;
+}
+.cart__summary-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.cart__summary-price {
+  margin-top: 0.4rem;
+  margin-bottom: 3.6rem;
+  padding-right: 2.1rem;
+  position: relative;
+}
+.cart__summary-price::after {
+  content: "₽";
+  position: absolute;
+  right: -2.3rem;
+  top: 0;
+  height: 100%;
+}
+.cart__summary-shelter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.cart .link {
+  position: absolute;
+  bottom: -2.9rem;
 }
 
 .header {
@@ -923,6 +1041,91 @@ body {
   width: fit-content;
   background-color: transparent;
   opacity: 1;
+}
+
+.counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2.2rem;
+}
+.counter__btn {
+  width: 4.2rem;
+  height: 4.2rem;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 0.2rem solid rgba(57, 53, 49, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  transition: -webkit-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+}
+@media (hover: hover) {
+  .counter__btn:hover {
+    border: 0.2rem solid rgb(57, 53, 49);
+  }
+}
+.counter__btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+.counter__btn span {
+  color: #393531;
+  text-align: center;
+  font-family: MaShanZheng;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.9rem;
+  display: block;
+}
+.counter__increase span {
+  margin-left: 0.75rem;
+}
+.counter__decrease span {
+  margin-bottom: 0.4rem;
+  margin-left: 0.75rem;
+}
+.counter__value {
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  background-color: #393531;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.counter__value span {
+  display: block;
+  margin-left: 0.35rem;
+  color: #feffbe;
+  text-align: center;
+  font-family: Inria Sans;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.48rem;
 }
 
 .inst {
@@ -2826,4 +3029,128 @@ body {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.contacts-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 160rem;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 4.5rem;
+  padding-bottom: 31.2rem;
+}
+.contacts-box__map {
+  width: 66.1rem;
+  height: 66.1rem;
+  border-radius: 66.1rem;
+  overflow: hidden;
+}
+.contacts-box__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.contacts-box__info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2.2rem;
+  margin-bottom: 1.9rem;
+}
+.contacts-box__info-adress {
+  margin-top: 1.9rem;
+  margin-bottom: 14.6rem;
+}
+.contacts-box__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4.8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.contacts-box__inputs-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3.6rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.contacts-box__input {
+  min-width: 36rem;
+  width: 100%;
+  text-align: start;
+  padding-bottom: 0.8rem;
+  border-bottom: 0.2rem solid #fff;
+}
+.contacts-box .ymaps-2-1-79-gototech {
+  display: none;
+}
+@media (max-width: 48em) {
+  .contacts-box {
+    width: 69.8rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10.6rem;
+    padding-top: 9rem;
+    padding-bottom: 30rem;
+  }
+  .contacts-box__info-box {
+    margin-top: 6.4rem;
+  }
+  .contacts-box__info-adress {
+    margin-top: 3.2rem;
+    margin-bottom: 8.4rem;
+  }
+  .contacts-box__form {
+    padding-top: 33.8rem;
+    gap: 8.4rem;
+  }
+  .contacts-box__inputs-wrapper {
+    gap: 5.6rem;
+  }
+  .contacts-box__input {
+    width: 66.7rem;
+    padding-bottom: 1.6rem;
+  }
 }

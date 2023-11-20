@@ -15,9 +15,7 @@ const createPag = (activeIndex, classPart) => {
 	} else {
 		bullet.style.display = 'block';
 	}
-	console.log('old activeIndex:' + current.textContent);
 	current.textContent = activeIndex;
-	console.log('new activeIndex:' + current.textContent);
 };
 
 const heroSlider = new Swiper('.hero-slider__box', {
@@ -346,10 +344,8 @@ const catalogSlider = new Swiper('.products-list-swiper', {
 			createPag(activePaginationIndex, '.catalog');
 		},
 		beforeTransitionStart: function () {
-			const activeSlideIndex = this.realIndex;
-			console.log(activeSlideIndex);
+			const activeSlideIndex = this.realIndex;	
 			const slidesPerGroup = this.params.slidesPerGroup;
-			console.log(slidesPerGroup);
 			const activePaginationIndex =
 				Math.floor(activeSlideIndex / slidesPerGroup) + 1;
 			createPag(activePaginationIndex, '.catalog');
